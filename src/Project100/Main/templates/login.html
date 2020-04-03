@@ -1,0 +1,12 @@
+{%extends 'Base.html'%}
+{%block content_main%}
+<div class="container my-3">
+    <form method='POST' action=".">
+        {%csrf_token%}
+        <div class="form-group">
+
+            {{form.as_p}}
+        </div>
+    </form>
+</div>
+{%endblock%}

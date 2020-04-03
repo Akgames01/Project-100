@@ -3,8 +3,8 @@ from django import forms
 from .models import User
 
 
-class Form(forms.ModelForm):
-    Name = forms.CharField(labels='', widget=forms.TextInput(attrs={
+class UserForm(forms.ModelForm):
+    Name = forms.CharField(widget=forms.TextInput(attrs={
         'placeholder': 'Enter your Name',
         'id': 'Name1',
     }))
@@ -26,7 +26,6 @@ class Form(forms.ModelForm):
     }))
     Phone = forms.CharField()
     PlaceofBirth = forms.CharField(required=False)
-
     class Meta:
         model = User
         fields = [
