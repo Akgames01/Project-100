@@ -1,0 +1,13 @@
+{%extends 'Base.html'%}
+{%block content_main%}
+<div class="container my-3">
+    <form method='POST' action=".">
+        {%csrf_token%}
+        <div class="form-group card">
+            {% for f in form %} 
+            <p>{{f}}</p>
+            {%endfor%}
+        </div>
+    </form>
+</div>
+{%endblock%}

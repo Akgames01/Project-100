@@ -1,12 +1,12 @@
 {%extends 'Base.html'%}
-{%block content_main%}
+{%block Main_content%}
 <div class="container my-3">
-    <form method='POST' action=".">
-        {%csrf_token%}
+    <form action="home/" method="POST">{%csrf_token%}
         <div class="form-group">
-
             {{form.as_p}}
         </div>
+    <!-- <button type="submit" value='login'></button> -->
+    <button type="submit" class="btn btn-light">login</button>
     </form>
 </div>
 {%endblock%}
